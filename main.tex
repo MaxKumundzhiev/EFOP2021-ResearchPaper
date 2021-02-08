@@ -67,7 +67,16 @@ Conducting the overview of the classification and the regression machine learnin
 
 \section{Decision Trees}
 Decision trees are utilized in everyday life decisions what can be invisible from the first point of view. The history of decision trees originates a long time ago and can encount more than 50 years overall of research and development.  
-The person who had the major impact of popularisation and expanding the decision trees to the random forest algorithm within his publication is Leo Breiman \cite{Breiman2001}. A decision tree is frequently a generalization of the experts experience, meaning sharing knowledge of a certain process. For instance, before the introduction of scalable machine learning algorithms, the credit scoring task in the banking sector was solved by experts personally. The decision whether to grant a loan was made on the basis of some intuitively (or empirically) derived rules that could be represented as a decision tree.
+The person who had the major impact of popularisation and expanding the decision trees to the random forest algorithm within his publication is Leo Breiman \cite{Breiman2001}. A decision tree is frequently a generalization of the experts experience, meaning sharing knowledge of a certain process. For instance, before the introduction of scalable machine learning algorithms, the credit scoring task in the banking sector was solved by experts personally. The decision whether to grant a loan was made on the basis of some intuitively (or empirically) derived rules that could be represented as a decision tree. As well it is important to emphasize the following notations:
+\begin{itemize}
+    \item Root Node: represents the entire sample. 
+    \item Splitting: represents the process of dividing a node into sub-nodes. 
+    \item Decision Node: once a sub-node splits into further sub-nodes.
+    \item Leaf: represents nodes which are not split-able anymore.  
+    \item Pruning: represents the process of removing the sub-nodes.
+    \item Sub-Tree: represents the subsection of the entire tree.
+    \item Parent and Child Node: a node, which is divided into sub-nodes is called a parent node of sub-nodes whereas sub-nodes are the child of a parent node.
+\end{itemize}
 
 \section{How to build a Decision Trees}
 To propose the best approach to dig around the logic behind building the certain tree it is worth to remember the game "20 Questions" \cite{Stocco2015}. This game allows to make an intuitive reference taking into consideration the goal of the game is to ask such question which will let you narrow down the number of the remaining questions and guess the person. This reasoning corresponds to the concept of information gain based on entropy.
@@ -88,11 +97,18 @@ In simplified terms Gini Index stands for maximization of the number of pairs of
 \[ G = 1 - \sum\limits_k (p_k)^2 \]
 
 \subsection{Tree-building Algorithms}
-
-
+Decision trees use multiple algorithms to decide to split a node into two or more sub-nodes. The creation of sub-nodes increases the homogeneity of resultant sub-nodes. In other words, we can say that the purity of the node increases with respect to the target variable. The decision tree splits the nodes on all available variables and then selects the split which results in most homogeneous sub-nodes. There are various algorithms to utilize but we will focus on two main ones.  
 \subsubsection{CART}
-\subsubsection{CHAID}
+%TBD
+The representation of Classification And Regression Tree is a binary tree. Each root node represents a single input variable $x$ and a split point on that variable (assuming the variable is numeric). The leaf nodes of the tree contain an output variable $y$ which is used to make a prediction.
 
+Creating a CART model involves selecting input variables and split points on those variables until a suitable tree is constructed.
+
+The selection of which input variable to use and the specific split or cut-point is chosen using a greedy algorithm to minimize a cost function. Tree construction ends using a predefined stopping criterion, such as a minimum number of training instances assigned to each leaf node of the tree.
+
+\subsubsection{CHAID}
+%TBD
+Chi-Squared Automatic Interaction Detection was proposed by Kass \cite{Lewis-Beck2012} in 1980. As is evident from the name of this algorithm, it is based on the chi-square statistic. A Chi-square test yields a probability value as a result lying anywhere between 0 and 1. A chi-square value closer to 0 indicates that there is a significant difference between the two classes which are being compared. Similarly, a value closer to 1 indicates that there is not any significant difference between the 2 classes. 
 
 
 
@@ -334,11 +350,13 @@ def cross_entropy(yHat, y):
 
 \section{Problem Background}
 
+
 \section{Dataset}
 
 \section{Fusion of Neural Net and Decision Tree}
 
 \section{Experiments}
+
 \subsection{Machine Properties}
 Within the experiments it was used macbook pro middle 2018 with Coffee Lake/8th generation: a 2.2GHz Core i7 processor with six cores and with intel turbo boost up to 4.1GHz.
 
