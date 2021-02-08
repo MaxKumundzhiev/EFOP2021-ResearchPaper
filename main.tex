@@ -54,27 +54,49 @@
 \begin{abstract}
 \hskip -.2in
 \noindent
+
+Within the last decade it was utilized a lot of research investigations and obtained significant rewards in the field of Artificial Intelligence with emphasizing of Deep Learning area as \href{https://techlurn.org/milestone-achievements-ai-decade.html}{AI insider journal reports}. In the provided list of areas Financial Technology takes pride of place, meaning the importance of continuous research and development has huge impact nowadays. Jointly this work it was investigated and solved welly common FinTech challenge such as "Credit Card Fraud Detection problem". In conjunction it was developed and utilized the robust approach which originates from the random forest method which ingrained by Breiman \cite{Breiman2001} called Neural Forests.  The approach discern by realigning the naive random forests into a neural forests jointly two dedicated ways of training the model. Both approaches inherit classification trees architecture and logic behind. On top of that it was stood a chance to downturn the amount of parameters to incline. The acquired results allowed to emphasise the competitiveness of the developed approach. 
 \end{abstract}
-% There is such problem...
-Within the last decade it was utilized a lot of research investigations and obtained significant rewards in the field of Artificial Intelligence with emphasizing of Deep Learning area as \href{https://techlurn.org/milestone-achievements-ai-decade.html}{AI insider journal reports}. In the provided list of areas Financial Technology takes pride of place, meaning the importance of continuous research and development has huge impact nowadays. Jointly this work it was investigated and solved welly common FinTech \cite{Puschmann2017} challenge such as "Credit Card Fraud Detection problem" \cite{Sahin2013}. In conjunction it was developed and utilized the robust approach which originates from the random forest method which ingrained by Breiman \cite{Breiman2001} called Neural Forests.  The approach discern by realigning the naive random forests into a neural forests jointly two dedicated ways of training the model. Both approaches inherit classification trees architecture and logic behind. On top of that it was stood a chance to downturn the amount of parameters to incline. The acquired results allowed to emphasise the competitiveness of the developed approach. 
 
 \section{Introduction}
+Conducting the overview of the classification and the regression machine learning methods we stick around with the one of most popular – a decision tree.
 
 \section{Related Work}
 % Encount previous works which rely on the current topic of the paper.
 
 
 \section{Decision Trees}
-\subsection{Decision Tree Types}
+Decision trees are utilized in everyday life decisions what can be invisible from the first point of view. The history of decision trees originates a long time ago and can encount more than 50 years overall of research and development.  
+The person who had the major impact of popularisation and expanding the decision trees to the random forest algorithm within his publication is Leo Breiman \cite{Breiman2001}. A decision tree is frequently a generalization of the experts experience, meaning sharing knowledge of a certain process. For instance, before the introduction of scalable machine learning algorithms, the credit scoring task in the banking sector was solved by experts personally. The decision whether to grant a loan was made on the basis of some intuitively (or empirically) derived rules that could be represented as a decision tree.
+
+\section{How to build a Decision Trees}
+To propose the best approach to dig around the logic behind building the certain tree it is worth to remember the game "20 Questions" \cite{Stocco2015}. This game allows to make an intuitive reference taking into consideration the goal of the game is to ask such question which will let you narrow down the number of the remaining questions and guess the person. This reasoning corresponds to the concept of information gain based on entropy.
+
+\subsection{Entropy}
+The Shannon's entropy \cite{Lotfi2010} is defined for a system with $N$ possible states as follows:
+\[ \Large S = -\sum_{i=1}^{N}p_i \log_2{p_i}, \]
+where $p_i$ is the probability of finding the system in the $i$-th state. 
+
+It is an important concept used in physics, information theory, as well as in other areas. Entropy can be described as the degree of chaos in the system. The higher the entropy, the less ordered the system and vice versa. This will help us to formalize "effective data splitting", which we alluded to in the context of "20 Questions".
+
+Since entropy is, in fact, the degree of chaos (or uncertainty) in the system, the reduction in entropy is called information gain. Formally, the information gain $IG$ for a split based on the variable $Q$ is defined as: 
+\[ \Large IG(Q) = S_O - \sum_{i=1}^{q}\frac{N_i}{N}S_i, \]
+where $q$ is the number of groups after split, $N_i$ is the number of the objects from the sample in which $Q$ is equal ti the $i$-th value. 
+
+\subsection{Gini Index}
+In simplified terms Gini Index stands for maximization of the number of pairs of objects of the same class that are in the same subtree (not to be confused with the Gini index) and can be derived as: 
+\[ G = 1 - \sum\limits_k (p_k)^2 \]
+
+\subsection{Tree-building Algorithms}
+
+
 \subsubsection{CART}
 \subsubsection{CHAID}
 
-\subsection{Decision Tree Metrics}
-\subsubsection{Gini Index}
-\subsubsection{Information Gain}
-\subsubsection{Variance reduction}
 
-\section{Neurons}
+
+
+\section{Neural Networks}
 Typically, neurons are kind of information messengers who make use of electrical and chemical gusts to transfer information across all brain moreover between brain and rest of the nervous system.
 
 \subsection{Biological neuron}
